@@ -1,6 +1,9 @@
-/*
-!./alacrity/
-!./nvim/
-!./tmux/
-!./fish/
-!/.gitignore
+*
+!alacrity/
+!nvim/
+!tmux/
+!fish/
+!i3/
+!polybar/
+!rofi/
+!.gitignore
