@@ -3,6 +3,9 @@
 -- vim.g.loaded_netrw = 1
 -- vim.g.loaded_netrwPlugin = 1
 -- Set highlight on search
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 vim.o.hlsearch = false
 -- Make line numbers default
 vim.wo.number = true
@@ -19,6 +22,12 @@ vim.o.breakindent = true
 
 -- Save undo history
 vim.o.undofile = true
+vim.o.autoindent = true
+vim.o.expandtab = true
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+
+
 
 -- Case insensitive searching UNLESS /C or capital in search
 vim.o.ignorecase = true

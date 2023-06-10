@@ -17,8 +17,9 @@ if status is-interactive
   alias xm "sh ~/xmodmap.sh"
   alias delvs 'delete_swap_neovim;commandline -f repaint'
   alias grep 'rg'
+  alias capture 'escrotum'
   command -qv nvim && alias vim nvim
-
+set -Ux TELEGRAM_KEY "6287575718:AAGjrInryAJQoXYx6qP5YLhQLaOr8ukWjvk"
   set -gx EDITOR nvim
   # set -gx PATH /home/hnimtadd/miniconda3/bin $PATH  # commented out by conda initialize
   set -gx PATH ~/.config/scripts $PATH
@@ -32,7 +33,7 @@ if status is-interactive
   set -gx PATH node_modules/.bin $PATH
 
   # Go
-  set -g GOPATH $HOME/go
+  set -g GOPATH /usr/local/go/bin
   set -gx PATH $GOPATH/bin $PATH
   set -gx ANTLR_JAR $HOME/.jar/antlr-4.9.2-complete.jar
   # NVM

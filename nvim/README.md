@@ -1,6 +1,7 @@
 # kickstart.nvim
 
 ### Introduction
+Hello, this is me again
 
 A starting point for Neovim that is:
 

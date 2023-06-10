@@ -150,10 +150,10 @@ require('lazy').setup({
     'windwp/nvim-ts-autotag'
   },
 
+  require('kickstart.plugins.autoformat'),
   -- note: next step on your neovim journey: add/configure additional "plugins" for kickstart
   --       these are some example plugins that i've included in the kickstart repository.
   --       uncomment any of the lines below to enable them.
-  -- require 'kickstart.plugins.autoformat',
   -- require 'kickstart.plugins.debug',
 
   -- note: the import below automatically adds your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
@@ -167,11 +167,20 @@ require('lazy').setup({
   {
     "sitiom/nvim-numbertoggle"
   },
-  {'nvim-tree/nvim-tree.lua',
+  {
+    'nvim-tree/nvim-tree.lua',
     event = "VeryLazy",
-    version ="*",
+    version = "*",
   },
-  {'nvim-tree/nvim-web-devicons'
+  { 'nvim-tree/nvim-web-devicons'
+  },
+  { 'kwkarlwang/bufresize.nvim' },
+  {
+    "iamcco/markdown-preview.nvim",
+    ft = "markdown",
+    build = function()
+      vim.fn["mkdp#util#install"]()
+    end,
   },
   {
     'akinsho/bufferline.nvim',
@@ -186,3 +195,5 @@ require('plugin.telescope')
 require('plugin.treesitter')
 require('plugin.nvim-tree')
 require('plugin.bufferline')
+require('plugin.bufresize')
+require('plugin.markdown-preview')

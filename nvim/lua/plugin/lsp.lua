@@ -1,4 +1,7 @@
-
+local handlers = {
+  ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
+  ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
+}
 -- LSP settings.
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
@@ -26,9 +29,20 @@ local on_attach = function(_, bufnr)
   nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
   nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
+  local diagnostics_active = true
+  vim.keymap.set('n', '<leader>d', function()
+    diagnostics_active = not diagnostics_active
+    if diagnostics_active then
+      vim.diagnostic.show()
+    else
+      vim.diagnostic.hide()
+    end
+  end)
+
+
   -- See `:help K` for why this keymap
   nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-  --nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
+  nmap('<C-d>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
   -- Lesser used LSP functionality
   nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
@@ -64,7 +78,8 @@ local servers = {
   },
   pylsp  = {
   },
-  html = {}
+  html   = {},
+  gopls  = {}
 }
 
 -- Setup neovim lua configuration
@@ -87,6 +102,7 @@ mason_lspconfig.setup_handlers {
       capabilities = capabilities,
       on_attach = on_attach,
       settings = servers[server_name],
+      handlers = handlers
     }
   end,
 }
@@ -137,4 +153,3 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
-
