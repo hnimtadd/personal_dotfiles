@@ -33,7 +33,7 @@ set -Ux TELEGRAM_KEY "6287575718:AAGjrInryAJQoXYx6qP5YLhQLaOr8ukWjvk"
   set -gx PATH node_modules/.bin $PATH
 
   # Go
-  set -g GOPATH /usr/local/go/bin
+  set -g GOPATH /usr/local/go
   set -gx PATH $GOPATH/bin $PATH
   set -gx ANTLR_JAR $HOME/.jar/antlr-4.9.2-complete.jar
   # NVM

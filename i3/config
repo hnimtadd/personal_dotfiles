@@ -144,8 +144,8 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 bindsym $mod+Control+m move workspace to ouput left
 bindsym $mod+Control+s move workspace to output right
 
-bindsym $mod+control+2 exec xrandr --output eDP1  --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI2 --off --output HDMI1 --auto  --primary --left-of eDP1 --output DP2 --off --output DP1 --off, restart
-bindsym $mod+control+1 exec xrandr --output eDP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI2 --off --output HDMI1 --off --output DP2 --off --output DP1 --off, restart
+# bindsym $mod+control+2 exec xrandr --output eDP1  --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI2 --off --output HDMI1 --auto  --primary --left-of eDP1 --output DP2 --off --output DP1 --off, restart
+# bindsym $mod+control+1 exec xrandr --output eDP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI2 --off --output HDMI1 --off --output DP2 --off --output DP1 --off, restart
 bindsym $mod+g exec multimonitor
 # reload the configuration file
 bindsym $mod+Shift+c reload
