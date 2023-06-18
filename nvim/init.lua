@@ -1,5 +1,5 @@
 require('settings')
-require('plugin')
 require('options')
+require('plugin')
 require('keymaps')
 require('commands')

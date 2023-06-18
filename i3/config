@@ -184,10 +184,10 @@ bindsym $mod+r mode "resize"
 # Start Polybar
 exec_always pkill polybar; polybar -c ~/.config/polybar/config.ini
 # Set border size to 2
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 3
 smart_gaps on
-gaps inner 10
-gaps outer 10
+gaps inner 7
+gaps outer 3
 exec_always nitrogen --restore
 exec_always picom -bGF
 

@@ -91,14 +91,14 @@ require('lazy').setup({
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     -- See `:help lualine.txt`
-    opts = {
-      options = {
-        icons_enabled = false,
-        theme = 'nord',
-        component_separators = '|',
-        section_separators = '',
-      },
-    },
+    -- opts = {
+    --   options = {
+    --     icons_enabled = false,
+    --     theme = 'nord',
+    --     component_separators = '|',
+    --     section_separators = '',
+    --   },
+    -- },
   },
 
   {
@@ -197,3 +197,4 @@ require('plugin.nvim-tree')
 require('plugin.bufferline')
 require('plugin.bufresize')
 require('plugin.markdown-preview')
+require('plugin.lualine')

@@ -19,7 +19,7 @@ if status is-interactive
   alias grep 'rg'
   alias capture 'escrotum'
   command -qv nvim && alias vim nvim
-set -Ux TELEGRAM_KEY "6287575718:AAGjrInryAJQoXYx6qP5YLhQLaOr8ukWjvk"
+# set -Ux TELEGRAM_KEY "6287575718:AAGjrInryAJQoXYx6qP5YLhQLaOr8ukWjvk"
   set -gx EDITOR nvim
   # set -gx PATH /home/hnimtadd/miniconda3/bin $PATH  # commented out by conda initialize
   set -gx PATH ~/.config/scripts $PATH

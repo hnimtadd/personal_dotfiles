@@ -8,8 +8,8 @@ local function my_on_attach(bufnr)
   vim.keymap.set('n', 'H', api.tree.change_root_to_parent, opts('Up'))
   vim.keymap.set('n', '<C-k>', api.node.show_info_popup, opts('Info'))
   vim.keymap.set('n', '<C-t>', api.node.open.tab, opts('Open: New Tab'))
-  vim.keymap.set('n', '<C-f>', api.node.open.vertical, opts('Open: Vertical Split'))
-  vim.keymap.set('n', '<C-v>', api.node.open.horizontal, opts('Open: Horizontal Split'))
+  vim.keymap.set('n', '<C-f>', api.node.open.horizontal, opts('Open: Vertical Split'))
+  vim.keymap.set('n', '<C-v>', api.node.open.vertical, opts('Open: Horizontal Split'))
   vim.keymap.set('n', '<BS>', api.node.navigate.parent_close, opts('Close Directory'))
   vim.keymap.set('n', '<CR>', api.node.open.edit, opts('Open'))
   vim.keymap.set('n', '<Tab>', api.node.open.preview, opts('Open Preview'))
@@ -55,6 +55,15 @@ local function my_on_attach(bufnr)
 end
 NvimTree.setup({
   on_attach = my_on_attach,
+  view = {
+    width = 30,
+  },
+  renderer = {
+    group_empty = true,
+  },
+  git = {
+    enable = false,
+  }
 })
 -- NvimTree.remove_keymaps()
 vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { silent = true })
